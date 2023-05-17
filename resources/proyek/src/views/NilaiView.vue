@@ -96,8 +96,6 @@ export default {
     return {
       apiBase,
       data: []
-      // intelegensi: ((data.nilai_x*(40/100)) + (data.nilai_y*(60/100)))/2,
-      // numeric: ((data.nilai_z*(30/100)) + (data.nilai_w*(70/100)))/2
     }
   },
   methods: {
