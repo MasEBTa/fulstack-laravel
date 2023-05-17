@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="alert-place container"></div>
   <form @submit="pushData()" class="mb-5" id="myform">
     <div class="container d-flex flex-lg-row flex-column">
@@ -21,6 +22,7 @@
     </div>
     <button type="submit" class="btn btn-secondary">Tambah</button>
   </form>
+</div>
 </template>
 
 <script>
