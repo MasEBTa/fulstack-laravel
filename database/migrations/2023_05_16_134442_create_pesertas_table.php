@@ -14,10 +14,10 @@ class CreatePesertasTable extends Migration
     public function up()
     {
         Schema::create('pesertas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
             $table->string('nama');
-            $table->string('email');
+            $table->string('email')->unique();
         });
     }
 

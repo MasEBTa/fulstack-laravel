@@ -14,13 +14,17 @@ class CreateNilaisTable extends Migration
     public function up()
     {
         Schema::create('nilais', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('user_id');
             $table->integer('nilai_x');
             $table->integer('nilai_y');
             $table->integer('nilai_z');
             $table->integer('nilai_w');
             $table->timestamps();
         });
+        // Schema::table('nilais', function (Blueprint $table) {
+        //     $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        // });
     }
 
     /**
@@ -30,6 +34,9 @@ class CreateNilaisTable extends Migration
      */
     public function down()
     {
+        Schema::table('nilais', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+        });
         Schema::dropIfExists('nilais');
     }
 }
