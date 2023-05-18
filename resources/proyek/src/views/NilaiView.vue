@@ -21,23 +21,23 @@
         <tr>
           <td>Intelegensi</td>
           <td>
-            <span v-if="intelegensi < 1.5">Check</span>
+            <span v-if="intelegensi < 1.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 1.5 && intelegensi < 2.5">Check</span>
+            <span v-if="intelegensi > 1.5 && intelegensi < 2.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 2.5 && intelegensi < 3.5">Check</span>
+            <span v-if="intelegensi > 2.5 && intelegensi < 3.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 3.5 && intelegensi < 4.5">Check</span>
+            <span v-if="intelegensi > 3.5 && intelegensi < 4.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 4.5">Check</span>
+            <span v-if="intelegensi > 4.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
         </tr>
@@ -78,6 +78,7 @@ table, th, td {
 <script>
 import { apiBase } from '../global/utils'
 import axios from 'axios'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 export default {
   props: ['id'], // Properti 'id' untuk menampung parameter
