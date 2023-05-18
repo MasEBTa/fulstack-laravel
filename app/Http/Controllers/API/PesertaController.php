@@ -35,7 +35,7 @@ class PesertaController extends Controller
             'email'   => ['required','unique:pesertas'],
             'nilaiX'  => ['required', 'numeric', 'min:1', 'max:33'],
             'nilaiY'  => ['required', 'numeric', 'min:1', 'max:23'],
-            'nilaiY'  => ['required', 'numeric', 'min:1', 'max:18'],
+            'nilaiZ'  => ['required', 'numeric', 'min:1', 'max:18'],
             'nilaiW'  => ['required', 'numeric', 'min:1', 'max:13'],
         ]);
         

@@ -69,7 +69,7 @@ export default {
       axios.get(this.apiBase + 'peserta')
         .then(response => {
           // Tangani respons sukses
-          console.log(response.data)
+          // console.log(response.data)
           this.data = response.data
         })
         .catch(error => {
@@ -83,7 +83,7 @@ export default {
         axios.delete(this.apiBase + 'peserta/' + id)
           .then(response => {
             // Tangani respons sukses
-            console.log(response.data)
+            // console.log(response.data)
             // perbarui data
             this.getData()
             const cover = document.getElementById('cover')
@@ -104,7 +104,6 @@ export default {
     }
   },
   mounted () {
-    console.log(this.apiBase)
     this.getData()
   }
 }

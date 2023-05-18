@@ -7,6 +7,14 @@
   </div>
 </template>
 
+<style scoped>
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+</style>
+
 <script>
 // @ is an alias to /src
 import TableView from './TableView.vue'

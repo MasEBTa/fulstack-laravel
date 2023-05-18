@@ -21,19 +21,19 @@
         <tr>
           <td>Intelegensi</td>
           <td>
-            <span v-if="intelegensi < 1.5"><i class="bi bi-check2-circle"></i></span>
+            <span v-if="intelegensi <= 1.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 1.5 && intelegensi < 2.5"><i class="bi bi-check2-circle"></i></span>
+            <span v-if="intelegensi > 1.5 && intelegensi <= 2.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 2.5 && intelegensi < 3.5"><i class="bi bi-check2-circle"></i></span>
+            <span v-if="intelegensi > 2.5 && intelegensi <= 3.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="intelegensi > 3.5 && intelegensi < 4.5"><i class="bi bi-check2-circle"></i></span>
+            <span v-if="intelegensi > 3.5 && intelegensi <= 4.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
@@ -44,23 +44,23 @@
         <tr>
           <td>Numeric</td>
           <td>
-            <span v-if="numeric < 1.5">Check</span>
+            <span v-if="numeric < 1.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="numeric > 1.5 && numeric < 2.5">Check</span>
+            <span v-if="numeric > 1.5 && numeric < 2.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="numeric > 2.5 && numeric < 3.5">Check</span>
+            <span v-if="numeric > 2.5 && numeric < 3.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="numeric > 3.5 && numeric < 4.5">Check</span>
+            <span v-if="numeric > 3.5 && numeric < 4.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
           <td>
-            <span v-if="numeric > 4.5">Check</span>
+            <span v-if="numeric > 4.5"><i class="bi bi-check2-circle"></i></span>
             <span v-else> </span>
           </td>
         </tr>
@@ -104,7 +104,7 @@ export default {
       axios.get(this.apiBase + 'peserta/' + this.userId)
         .then(response => {
           // Tangani respons sukses
-          console.log(response.data)
+          // console.log(response.data)
           this.data = response.data
         })
         .catch(error => {

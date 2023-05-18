@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import NavbarView from './views/components/NavbarView.vue' // Impor komponen NavbarView
+import NavbarView from './components/NavbarView.vue' // Impor komponen NavbarView
 
 export default {
   components: {
